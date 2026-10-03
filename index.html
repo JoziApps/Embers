@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="rating" content="RTA-5042-1996-1400-1577-RTA">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#1a0a1d">
+<meta name="description" content="Ember: a private, consent-first intimacy game for adults 18+.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%A5%3C/text%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ember – Adults only</title>
+<style>
+:root{--bg:#fff1ee;--card:#fff;--ink:#2b1020;--mut:#85606f;--ac:#d6245a;--gold:#b9770e;--line:#efd2d6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a0a1d;--card:#2a1230;--ink:#fbe9e4;--mut:#c49aae;--ac:#ff5e7e;--gold:#f2b866;--line:#43204a}}
+:root[data-theme="dark"]{--bg:#1a0a1d;--card:#2a1230;--ink:#fbe9e4;--mut:#c49aae;--ac:#ff5e7e;--gold:#f2b866;--line:#43204a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:520px;margin:0 auto;padding:22px 16px 90px;min-height:100vh}
+h1,h2,.big{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-style:italic;letter-spacing:-.01em;margin:.2em 0}
+h1{font-size:3.2rem;line-height:1}h2{font-size:1.7rem}.big{font-size:2.6rem;color:var(--ac)}
+p{margin:.5em 0}.mut{color:var(--mut)}
+.btn{display:block;width:100%;border:0;border-radius:14px;padding:15px 18px;margin:10px 0;font:600 1rem system-ui;background:var(--ac);color:#fff;cursor:pointer;text-align:left}
+.btn.alt{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn small{display:block;font-weight:400;opacity:.85}
+.btn:focus-visible,input:focus-visible,.chip:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+input,textarea{width:100%;padding:13px;border-radius:12px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font:1rem system-ui;margin:6px 0}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.chip{border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:9px 14px;cursor:pointer;font:.95rem system-ui}
+.chip.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:22px;padding:26px 22px;margin:14px 0;min-height:190px;display:flex;flex-direction:column;justify-content:center}
+.card .t{font:1.45rem/1.35 Georgia,serif}
+.tag{color:var(--gold);font-size:.9rem;margin-bottom:10px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.grid .btn{text-align:center;margin:0}
+.bar{height:4px;background:var(--line);border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:var(--ac)}
+.row{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:13px 15px;margin:9px 0}
+.row b{color:var(--gold);font-weight:600;font-size:.85rem}
+#pz{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);right:12px;z-index:5;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:8px 14px;font:600 .9rem system-ui;cursor:pointer;display:none}
+#ov{position:fixed;inset:0;background:rgba(10,0,12,.82);display:none;align-items:center;justify-content:center;padding:20px;z-index:9}
+#ov div{background:var(--card);border-radius:22px;padding:24px;max-width:420px}
+footer{text-align:center;color:var(--mut);font-size:.82rem;margin-top:34px}
+@media(prefers-reduced-motion:no-preference){.card{animation:in .35s ease}@keyframes in{from{opacity:0;transform:translateY(8px)}}}
+
+#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.wrap{position:relative;z-index:1}
+#th{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);left:12px;z-index:5;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;width:38px;height:36px;font-size:1.1rem;cursor:pointer}
+.card,.row,#ov div{backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:color-mix(in srgb,var(--card) 78%,transparent)}
+.card{box-shadow:0 18px 40px -22px var(--ac)}
+.btn{background:linear-gradient(135deg,var(--ac),#ff8a5c);box-shadow:0 8px 22px -10px var(--ac);transition:transform .15s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}.btn:active{transform:scale(.97)}
+.btn.alt{background:color-mix(in srgb,var(--card) 70%,transparent);box-shadow:none}
+h1{background:linear-gradient(90deg,var(--ac),var(--gold),var(--ac));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent}
+.bar i{box-shadow:0 0 12px var(--ac);transition:width .4s}
+.chip{transition:box-shadow .2s,background .2s}.chip.on{box-shadow:0 0 14px -2px var(--ac)}
+@media(prefers-reduced-motion:no-preference){
+#app.in{animation:sl .45s cubic-bezier(.2,.8,.2,1)}@keyframes sl{from{opacity:0;transform:translateY(14px) scale(.98)}}
+h1{animation:sh 6s linear infinite}@keyframes sh{to{background-position:200% 0}}
+.card{animation:fl .5s cubic-bezier(.2,.8,.2,1)}@keyframes fl{from{opacity:0;transform:perspective(600px) rotateX(-16deg) translateY(12px)}}
+}
+</style></head><body>
+<canvas id="fx"></canvas><button id="th" onclick="th()" aria-label="Toggle light or dark theme">◐</button>
+<button id="pz" onclick="pz(1)">Pause</button>
+<div id="ov"><div><h2>Pause. Breathe.</h2><p>Check in with each other: Are you both still into this? Anyone can stop at any time, no reason needed.</p><button class="btn" onclick="pz(0)">We're good, continue</button><button class="btn alt" onclick="pz(0);go('home')">Stop and exit</button></div></div>
+<div class="wrap"><div id="app"></div>
+<footer>Ember · 18+ only · Consent first, always<br>Crafted by Jozi Nites</footer></div>
+<script>
+const C=[
+["Vanilla",0,"Hold each other close and kiss for one slow, full minute. Let your hands say what your mouth isn't ready to."],
+["Vanilla",0,"Tell your partner, in a low voice, exactly what you find irresistible about their body."],
+["Kink",0,"ASMR whisper: murmur a slow, sweet fantasy an inch from their ear for two minutes."],
+["Vanilla",1,"Kiss and trace fingertips over clothes until one of you pulls the other closer."],
+["Vanilla",1,"Give a long, oiled massage that drifts slowly toward the inner thighs."],
+["Kink",1,"Blindfold your partner and tease with feather-light touch. They guess where comes next."],
+["Vanilla",2,"Undress each other one piece at a time. Look, linger, touch with fingertips only."],
+["Kink",2,"Edge yourself to an eight out of ten, stop, breathe, then build again. Do it twice."],
+["Kink",2,"Gentle power exchange: one leads for fifteen minutes, the other obeys. Agree a safe word first."],
+["Vanilla",3,"Oral pleasure, taking turns. Slow, wet, no rushing, and tell each other what works."],
+["Vanilla",3,"Pleasure yourselves side by side, eyes locked, narrating every sensation."],
+["Kink",3,"JOI: guide your partner's hand with your voice alone, and decide when they may stop."],
+["Kink",3,"Prostate curiosity: external massage with lube, slow circles, constant check-ins."],
+["Vanilla",4,"Try a new position and hold it until you are both begging for more."],
+["Kink",4,"Hands-free attempt: edge with breath, clenching and fantasy only. No touch, ride it to the end."],
+["Kink",4,"Anal play with plenty of lube: start with a finger or small toy, breathe, stop at any sharp pain."],
+["Kink",4,"CEI: the one who finishes cleans up as agreed beforehand, tasting only if you both want it."],
+["Kink",4,"Bisexual fantasy: describe a scene with someone of the same gender, then act out the best part together."],
+["Kink",4,"A long edging session with a lush ASMR playlist in your headphones and your partner watching."],
+["Vanilla",5,"A marathon night: edge each other all evening and let only the final round finish."],
+["Kink",5,"Full power exchange scene: negotiate limits, roles, safe word and aftercare, then run it."],
+["Kink",5,"Denial and ruin: hold off for days, then a controlled, ruined orgasm on command."],
+["Kink",5,"Prostate-led orgasm: toy, lube, slow rhythm, and a voice guiding every breath."],
+["Kink",5,"Plan a bi threesome: set ground rules, share boundaries, and live it only with every person's enthusiastic yes."]].map((c,i)=>c);
+const SN=[[0,"A selfie of your most flirty look."],[1,"A pic of your outfit, styled the way you'd wear it for them."],[2,"A video of you whispering what you want tonight, ASMR style."],[3,"A pic or video as proof you finished tonight's self-pleasure task, face optional."],[3,"A video of you slowly undressing, face optional."],[4,"A video of you edging yourself, face optional."],[5,"A video of a hands-free orgasm attempt, face optional."]];
+const TK=[["Daily",0,"Send your partner a flirty message, or flirt with yourself in the mirror."],["Daily",1,"Five minutes of slow touch: neck, chest, inner thighs."],["Daily",2,"Slow self-pleasure for ten minutes, no rushing. Log how you feel afterwards."],["Daily",3,"Edge three times before you finish, or choose not to finish."],["Daily",3,"ASMR session: headphones, whisper audio, hands-free arousal."],["Daily",4,"Prostate or anal warm-up with lube and a small toy for ten minutes."],["Daily",5,"A hands-free orgasm attempt using only breath and fantasy."],["Weekly",1,"Date night with phones away and one card from your shared list."],["Weekly",2,"Mutual touch session: one leads, then you swap."],["Weekly",3,"JOI night: one guides by voice, the other obeys."],["Weekly",4,"Power exchange evening with agreed rules and aftercare."],["Weekly",4,"Edging week: three sessions, finish only on the third."],["Weekly",5,"Bi fantasy conversation or scene, with everyone's full consent."],["Monthly",2,"Try one thing from your Maybe list."],["Monthly",3,"Buy or borrow a new toy together."],["Monthly",4,"Plan a full evening scene: negotiate, play, aftercare."],["Monthly",5,"Review your journal: what to keep, drop and escalate."]];
+const TIPS=[["Safe play for anal and prostate","Use plenty of lube, go slow, stop at sharp pain, and only use toys with a flared base. Clean toys after every use."],["Negotiate power exchange","Agree limits, a safe word and aftercare before any scene. Check in often and stop the moment anyone says so."],["Say it before, not during","Agree on limits and a stop word before things heat up. It makes surrender easier."],["Maybe is a gift","A Maybe means 'ask me gently'. Never push a Maybe into a Yes."],["Aftercare matters","Water, cuddles, a check-in. Ten minutes after is part of the experience."],["Curiosity beats performance","Ask what feels good and listen. Attention is the sexiest skill."]];
+const HN=["Shy","Curious","Warm","Bold","Wild","Experienced"];
+const $=s=>document.querySelector(s);
+const e=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let S={scr:'gate',mode:'couple',names:['',''],heat:2,deck:[],pi:0,ci:0,ans:[],ch:null};
+function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(x){return null}}
+function go(s){S.scr=s;$('#pz').style.display=(s=='play'||s=='chal'||s=='snap'||s=='act'||s=='rlt')?'block':'none';render();window.scrollTo(0,0)}
+function pz(o){$('#ov').style.display=o?'flex':'none'}
+function ageOk(){const v=$('#dob').value;if(!v){$('#err').textContent='Enter your date of birth.';return}
+const d=new Date(v),n=new Date();let a=n.getFullYear()-d.getFullYear();if(n<new Date(n.getFullYear(),d.getMonth(),d.getDate()))a--;
+if(a>=18){ls('ember_age','1');go('home')}else{$('#err').textContent='Ember is for adults only. You must be 18 or older.'}}
+function setMode(m){S.mode=m;S.names=m=='solo'?['']:m=='couple'?['','']:['','',''];go('setup')}
+function rd(){S.names=S.names.map((_,i)=>($('#n'+i)||{value:''}).value)}
+function addP(){rd();if(S.names.length<6)S.names.push('');render()}
+function heat(h){rd();S.heat=h;render()}
+function start(){rd();S.names=S.names.map((n,i)=>n.trim()||'Player '+(i+1));deal()}
+function nextRound(){S.heat=Math.min(5,S.heat+1);deal()}
+function deal(){
+const pool=C.map((c,i)=>({id:i,cat:c[0],h:c[1],t:c[2]})).filter(c=>c.h<=S.heat&&c.h>=Math.max(0,S.heat-2)).sort((a,b)=>a.h-b.h||Math.random()-.5);
+S.deck=pool.slice(0,12);S.pi=0;S.ci=0;S.ans=S.names.map(()=>({}));go('pass')}
+function answer(v){const c=S.deck[S.ci];S.ans[S.pi][c.id]=v;S.ci++;
+if(S.ci>=S.deck.length){S.ci=0;S.pi++;go(S.pi>=S.names.length?'res':'pass')}else render()}
+function matches(){const ok=a=>a=='y'||a=='m'||a=='c';return S.deck.filter(c=>S.ans.every(a=>ok(a[c.id]))).map(c=>({...c,strong:S.ans.every(a=>a[c.id]=='y')}))}
+function chal(){const m=matches(),s=m.filter(x=>x.strong);const pool=s.length?s:m;S.ch=pool.length?pool[Math.floor(Math.random()*pool.length)]:null;go('chal')}
+function done(){const t=new Date().toDateString(),y=new Date(Date.now()-864e5).toDateString();let st={n:0,last:''};
+try{st=JSON.parse(ls('ember_streak')||'')||st}catch(x){}
+if(st.last!=t){st.n=st.last==y?st.n+1:1;st.last=t}ls('ember_streak',JSON.stringify(st));go('home')}
+function streak(){try{return(JSON.parse(ls('ember_streak')||'{}')||{}).n||0}catch(x){return 0}}
+function snapNext(){const q=SN.filter(x=>x[0]<=S.heat);S.sp=q[Math.floor(Math.random()*q.length)];S.url=null;go('snap')}
+function snapFile(i){const f=i.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{S.url=r.result;S.vid=f.type.indexOf('video')==0;S.rev=false;render()};r.readAsDataURL(f)}
+function actStart(){S.am=matches();S.ai=0;S.as=0;S.ph=null;go('act')}
+function actPhoto(i){const f=i.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{S.ph=r.result;render()};r.readAsDataURL(f)}
+function actNext(){if(!S.as){S.as=1;S.ph=null;render();return}
+let L=[];try{L=JSON.parse(ls('ember_log')||'[]')}catch(x){}
+L.push({m:+$('#fm').value,s:+$('#fs').value,c:+$('#fc').value,d:$('#fd').value.slice(0,500)});
+ls('ember_log',JSON.stringify(L.slice(-200)));S.ph=null;S.as=0;S.ai++;S.ai>=S.am.length?go('ins'):render()}
+const R=[
+{k:"Edge & Deny",r:"Optional. Pause any time. Stop if anything hurts.",d:[["Touch",[[0,"Slow flat-hand strokes, no rush."],[1,"Two fingers on the base only."],[2,"Palm over the head, light circles."],[3,"Five fast seconds, ten still seconds, repeat."],[4,"Hands-free: breath, thighs, clenches. No touch."]]],["Edges",[[0,"Edge 2 times."],[1,"Edge 3 times."],[2,"Edge 5 times."],[3,"Edge 7 times, holding each for 10 seconds."],[5,"Edge until you lose count, then hold still for a full minute."]]],["Finish",[[0,"Finish when you want."],[1,"Finish only after the last edge."],[3,"Ruin it: hands off at the point of no return."],[4,"Denied: no finish today. Sit with the ache."],[5,"Finish hands-free, or not at all."]]]],b:["Dubs: whisper what you'd do to a partner at every edge.","Trips: add ASMR audio in headphones.","Quads: write your journal entry before you may finish."]},
+{k:"Anal Explorer",r:"Real lube only. No household objects. Flared-base toys only. Stop at sharp pain.",d:[["Place",[[0,"Bed with a towel."],[1,"Bath or shower."],[2,"Sofa with a towel."],[3,"Standing in the shower."],[4,"Anywhere private you pick."]]],["Play",[[0,"Lube the outside, slow circles, five minutes."],[1,"One lubed fingertip, shallow and slow, five minutes."],[2,"One finger seeks the prostate, ten minutes."],[3,"Two fingers or a small toy, slow strokes."],[4,"A flared-base toy, steady rhythm, deep breaths."]]],["Add-on",[[0,"Breathe in a slow count of four."],[1,"Add a vibrator on your skin."],[2,"Edge 3 times with the prostate in play."],[3,"Aim for a hands-free finish."],[5,"A partner guides you by voice only."]]]],b:["Dubs: warm shower and water afterwards.","Trips: replay in a week, one level up.","Quads: log how you feel before and after."]},
+{k:"Bi Curiosity",r:"Fantasy first. Pass anything you don't want, no reason needed.",d:[["Feed your mind",[[0,"Bi-curious audio stories."],[1,"Erotic stories about bi first times."],[2,"Same-gender scenes."],[3,"Mixed-gender threesome scenes."],[4,"Your pick, no rules."]]],["Time",[[0,"10 minutes."],[1,"20 minutes."],[2,"30 minutes."],[3,"40 minutes."],[4,"One hour."]]],["Focus",[[0,"Picture touching someone of the same gender, slowly."],[1,"Use a toy while you fantasize about their body."],[2,"Describe your fantasy aloud in detail."],[3,"Narrate your role in a mixed scene."],[5,"Plan one real, consensual step with your partner."]]]],b:["Dubs: tell your partner the fantasy tonight.","Trips: whisper it ASMR style.","Quads: write the scene you most want to live."]},
+{k:"Private Selfie Roll",r:"Stays on your device, or goes only to a partner who said yes. Never public.",d:[["Outfit",[[0,"Tank top and boxers."],[1,"Open shirt and jeans."],[2,"Underwear only."],[3,"Lingerie or a thong."],[4,"Nothing at all."]]],["Showing",[[0,"Face and body, clothed."],[1,"Body only, no face."],[3,"Face and bare chest."],[4,"No face, everything."],[5,"Face and everything."]]],["Then",[[0,"Keep it on your device only."],[1,"Send to your partner, only if they said yes."],[2,"Look again tomorrow, then delete."],[3,"Add a caption: how it felt."],[4,"Delete it after one minute."]]]],b:["Dubs: a second shot in a new pose.","Trips: a ten-second voice note.","Quads: write what you want done to you."]},
+{k:"Power Dice",r:"Consenting partners only. Agree limits and a safe word first. A red card ends it.",d:[["Roles",[[0,"Swap every five minutes."],[1,"Partner A leads."],[2,"Partner B leads."],[3,"The leader sets the pace and the rules."],[4,"Full lead, restraints agreed in advance."]]],["Order",[[0,"A massage with commands."],[1,"Undress on command."],[2,"Tease with hands only."],[3,"Edge on command."],[4,"Orgasm control: permission required."]]],["Reward",[[0,"A long kiss."],[1,"Praise, out loud."],[2,"Choose the next position."],[3,"Permission to finish."],[5,"A hands-free finish on command."]]]],b:["Dubs: five extra minutes of aftercare.","Trips: swap roles for the last round.","Quads: renegotiate the rules mid-scene."]},
+{k:"Finish Line",r:"Optional. Pass on anything. Wash up after, keep it private, and never share fluids with anyone untested.",d:[["Where",[[0,"Your belly."],[1,"Your hand."],[2,"Your chest."],[3,"A towel you'll smell afterwards."],[4,"Your face or mouth, if you want."]]],["Play",[[0,"Rub it in slowly, like lotion."],[1,"Hold it in your palm for a minute."],[2,"Use it as lube for a second round."],[3,"Taste a little, spit if you don't like it."],[4,"Eat it all (CEI), or pass."]]],["Clean-up",[[0,"Tissue, right away."],[1,"Tissue after a one-minute wait."],[2,"Let it dry for ten minutes first."],[4,"Lick your fingers clean."],[5,"Stay still and breathe for a full minute, then clean up slowly."]]]],b:["Dubs: take a photo for your eyes only, then delete it.","Trips: describe the moment aloud, in detail.","Quads: a second round in a new place at home."]},
+{k:"JOI & ASMR Night",r:"Let the voice do the work. Pass or pause any time.",d:[["Voice",[[0,"A calm whisper close to the mic."],[1,"A slow, teasing murmur."],[2,"Firm, low instructions."],[3,"Commanding and breathy."],[4,"Praise, orders and a countdown."]]],["Instruction",[[0,"Touch yourself only where the voice says."],[1,"Slow strokes matching the voice."],[2,"Stop and start on command."],[3,"Edge three times on a countdown."],[5,"Finish only when the voice gives permission."]]],["Sound",[[0,"Soft breathing."],[1,"Fabric and skin sounds."],[2,"Whispered counting."],[3,"Whispered praise and dirty talk."],[4,"Your own recorded voice note."]]]],b:["Dubs: record it for yourself only.","Trips: swap roles and give the voice.","Quads: write the script you'd want next time."]},
+{k:"Hands-Free Quest",r:"Patience, not pressure. It can take many tries. Stop if anything hurts.",d:[["Setup",[[0,"Lie down, headphones on, lights low."],[1,"Warm bath or shower first."],[2,"Soft fabric on bare skin."],[3,"Blindfold on."],[4,"A vibrator on your thigh or perineum."]]],["Method",[[0,"Slow belly breaths for five minutes."],[1,"Squeeze and release your pelvic floor in rhythm."],[2,"Fantasize about a scene, no hands."],[3,"Edge with thighs and clenches only."],[5,"Combine breath, clenches and fantasy until you finish."]]],["Time",[[0,"Ten minutes."],[1,"Twenty minutes."],[2,"Thirty minutes."],[3,"Forty-five minutes."],[4,"One hour, or until you finish."]]]],b:["Dubs: log what worked right after.","Trips: try again tomorrow, one level up.","Quads: add your partner's voice on a call."]},
+{k:"Strip & Tease",r:"Both of you say yes first. A red card stops everything.",d:[["Start",[[0,"Dance for two minutes, clothed."],[1,"Strip slowly, one item per song."],[2,"Strip in front of a mirror while your partner watches."],[3,"Strip while your partner gives the orders."],[4,"Strip down to lingerie or nothing."]]],["Touch",[[0,"Look but don't touch."],[1,"Touch with fingertips only."],[2,"Touch with lips only."],[3,"Hands behind your back."],[4,"Blindfolded, touched anywhere you agreed."]]],["Finish",[[0,"A long kiss."],[1,"A slow massage."],[2,"Edge your partner, then stop."],[3,"Take turns pleasuring each other."],[5,"Marathon: nobody finishes until the third round."]]]],b:["Dubs: add a song.","Trips: switch roles.","Quads: skip straight to the finish."]}];
+const FL=["Not a vanilla","Down for shenanigans","Always upside down","Just ask me, I might","Plays well with others","Married with benefits"];
+function rl(i){S.ri=i;S.roll=null;S.spin=0;go('rlt')}
+function doRoll(){const q=R[S.ri];S.roll=q.d.map(x=>{const es=x[1],ok=[0,1,2,3,4].filter(j=>es[j][0]<=S.heat),pl=ok.length?ok:[0],j=pl[Math.floor(Math.random()*pl.length)];return[x[0],j*2+Math.floor(Math.random()*2),es[j][1]]});
+const bd=[0,0,0,0].map(()=>Math.floor(Math.random()*10)),c={};bd.forEach(x=>c[x]=(c[x]||0)+1);const mx=Math.max(...Object.values(c));S.bd=bd.join('');S.bo=mx>=2?q.b[Math.min(mx,4)-2]:null;render()}
+function rDone(){ls('ember_pts',(+ls('ember_pts')||0)+1);go('rlh')}
+function flg(){try{return JSON.parse(ls('ember_fl')||'[]')}catch(x){return[]}}
+function fl(i){const a=flg(),k=a.indexOf(i);k<0?a.push(i):a.splice(k,1);ls('ember_fl',JSON.stringify(a));render()}
+function snapRev(){S.rev=true;render()}
+function snapDone(){S.url=null;ls('ember_pts',(+ls('ember_pts')||0)+1);snapNext()}
+function ckl(){try{return JSON.parse(ls('ember_ck')||'[]')}catch(x){return[]}}
+function tk(k){const a=ckl(),i=a.indexOf(k);i<0?a.push(k):a.splice(i,1);ls('ember_ck',JSON.stringify(a));render()}
+const V={
+gate:()=>`<h1>Ember</h1><h2>Turn up the heat. Together.</h2><p class="mut">Private answers. Shared sparks. Dares you can say yes to. This app contains sexual themes and is for adults only.</p><p>Date of birth</p><input id="dob" type="date" aria-label="Date of birth"><p id="err" style="color:var(--ac)" role="alert"></p><button class="btn" onclick="ageOk()">I'm 18 or older. Enter</button>`,
+home:()=>`<h1>Ember</h1><h2>Who's feeling bold tonight?</h2>${streak()?`<p class="tag">${streak()}-night streak. Keep it burning.</p>`:''}<button class="btn" onclick="setMode('solo')">Just me<small>Discover what turns you on, in private.</small></button><button class="btn" onclick="setMode('couple')">Me and my partner<small>Answer in secret. See only what you both crave.</small></button><button class="btn" onclick="setMode('group')">A group<small>Only what everyone is comfortable with makes the list.</small></button><button class="btn" onclick="snapNext()">Snap &amp; Show<small>A pic or vid dare game. Private, blurred, deleted after.</small></button><button class="btn" onclick="go('rlh')">Roulettes<small>Roll the dice: edging, anal, bi, selfies and power play.</small></button><button class="btn alt" onclick="go('flags')">🍍 Lifestyle flags<small>Pick the badges that say who you are.</small></button><button class="btn" onclick="go('tasks')">Daily, weekly &amp; monthly tasks<small>Level-based. Tick them off and keep building.</small></button><button class="btn" onclick="go('ins')">My progress<small>Mood, stress and confidence after each session.</small></button><button class="btn alt" onclick="go('learn')">Learn something new<small>Desire, consent and aftercare, in plain words.</small></button>`,
+setup:()=>`<h2>${S.mode=='solo'?'Your name':'Who is playing?'}</h2>${S.names.map((n,i)=>`<input id="n${i}" value="${e(n)}" placeholder="Name or nickname ${i+1}" maxlength="20" aria-label="Player ${i+1} name">`).join('')}${S.mode=='group'&&S.names.length<6?`<button class="btn alt" onclick="addP()">Add a player</button>`:''}<p>Pick your level: 0 is shy, 5 is experienced.</p><div class="chips">${[0,1,2,3,4,5].map(h=>`<button class="chip ${S.heat==h?'on':''}" onclick="heat(${h})">${h} · ${HN[h]}</button>`).join('')}</div><button class="btn" onclick="start()">Deal the cards</button><button class="btn alt" onclick="go('home')">Back</button>`,
+pass:()=>{const n=e(S.names[S.pi]);return`<p class="mut">Pass the device to</p><div class="big">${n}</div><p>Answer honestly. Your partner never sees a No. Only the Yes and Maybe you share.</p><button class="btn" onclick="go('play')">I'm ${n}. Ready.</button>`},
+play:()=>{const c=S.deck[S.ci];return`<div class="bar"><i style="width:${S.ci/S.deck.length*100}%"></i></div><p class="mut">${e(S.names[S.pi])} · card ${S.ci+1} of ${S.deck.length}</p><div class="card"><div class="tag">${e(c.cat)} · ${'L'+c.h}</div><div class="t">${e(c.t)}</div></div><div class="grid"><button class="btn" onclick="answer('y')">🔥 Yes</button><button class="btn alt" onclick="answer('m')">😏 Maybe</button><button class="btn alt" onclick="answer('c')">✨ Curious</button><button class="btn alt" onclick="answer('n')">✋ No</button></div>`},
+res:()=>{const m=matches();return`<h2>${S.names.length>1?'Your shared sparks':'What lights you up'}</h2><p class="mut">${m.length?(S.names.length>1?'Everyone said yes, maybe or curious to these. Nothing else is revealed.':'Your private list.'):'No overlap this round. That is okay. Try a lower heat or deal again.'}</p>${m.map(c=>`<div class="row"><b>${c.strong?'EVERYONE SAID YES':'Open to it'} · ${e(c.cat)}</b><br>${e(c.t)}</div>`).join('')}<button class="btn" onclick="chal()">Give me tonight's dare</button><button class="btn" onclick="actStart()">Act them out</button><button class="btn" onclick="nextRound()">Next round: turn it up</button><button class="btn alt" onclick="go('setup')">Deal again</button><button class="btn alt" onclick="go('home')">Home</button>`},
+chal:()=>{const c=S.ch;return`<h2>Tonight's dare</h2><div class="card"><div class="tag">${c?e(c.cat)+' · '+'L'+c.h:'Warm-up'}</div><div class="t">${c?e(c.t):'No shared matches yet. Dare: tell each other three things you find irresistible, then deal again.'}</div></div><p class="mut">Optional, always. Skip without a reason, or pause any time.</p><button class="btn" onclick="done()">We did it. Keep the streak</button><button class="btn alt" onclick="chal()">Another dare</button><button class="btn alt" onclick="go('home')">Skip tonight</button>`},
+snap:()=>{const p=S.sp,pts=ls('ember_pts')||0;
+if(!S.url)return`<h2>Snap &amp; Show</h2><p class="mut">Points: ${pts} 🔥. Snap a pic or vid to score. Skipping is free, no penalty.</p><div class="card"><div class="tag">${'L'+p[0]} Heat ${p[0]}</div><div class="t">${e(p[1])}</div></div><p class="mut">Both of you agree before you start. Media stays on this device, is never uploaded or saved, and stays blurred until revealed. Only ever share your own.</p><label class="btn">📷 Take or choose a pic / video<input type="file" accept="image/*,video/*" onchange="snapFile(this)" hidden></label><button class="btn alt" onclick="snapNext()">Skip. Next dare</button><button class="btn alt" onclick="go('home')">Exit game</button>`;
+const st=S.rev?'':'filter:blur(30px)',m=S.vid?`<video src="${S.url}" controls playsinline style="width:100%;border-radius:16px;${st}"></video>`:`<img src="${S.url}" alt="Your snap" style="width:100%;border-radius:16px;${st}">`;
+return`<h2>Ready?</h2>${m}<p class="mut">${S.rev?'Revealed. Enjoy it, then delete.':'Hidden until the viewer taps reveal.'}</p>${S.rev?'':'<button class="btn" onclick="snapRev()">Reveal to partner</button>'}<button class="btn ${S.rev?'':'alt'}" onclick="snapDone()">Delete it and score a point</button>`},
+act:()=>{if(!S.am.length)return`<h2>Nothing to act out yet</h2><p class="mut">No shared yes cards this round. Raise the level and deal again.</p><button class="btn" onclick="go('setup')">Back to setup</button>`;
+const c=S.am[S.ai],n=`${S.ai+1} of ${S.am.length}`;
+if(!S.as)return`<p class="mut">Act ${n} · ${e(c.cat)} · L${c.h}</p><div class="card"><div class="t">${e(c.t)}</div></div><p class="mut">Act it out now, alone or together. Go slowly, breathe, and stop any time. Then come back.</p><button class="btn" onclick="actNext()">I did it. Capture it</button><button class="btn alt" onclick="S.ai++;S.ai>=S.am.length?go('ins'):render()">Skip this one</button>`;
+return`<h2>Capture it</h2><label class="btn alt">📷 Add a cover photo, optional<input type="file" accept="image/*" onchange="actPhoto(this)" hidden></label>${S.ph?`<img src="${S.ph}" alt="Your cover photo" style="width:100%;max-height:240px;object-fit:cover;border-radius:14px">`:''}<p class="mut">For your eyes only. Never uploaded, gone when you continue.</p><p>Describe it in detail: what you did, what you felt, what you want next.</p><textarea id="fd" rows="5" placeholder="Be vivid..." aria-label="Describe it"></textarea><p>Mood now <input id="fm" type="range" min="1" max="5" value="3"></p><p>Stress now <input id="fs" type="range" min="1" max="5" value="3"></p><p>Confidence now <input id="fc" type="range" min="1" max="5" value="3"></p><button class="btn" onclick="actNext()">Save to my private log</button>`},
+ins:()=>{let L=[];try{L=JSON.parse(ls('ember_log')||'[]')}catch(x){}
+if(!L.length)return`<h2>My progress</h2><p class="mut">No sessions logged yet. Act out a card and save how you feel to track mood, stress and confidence.</p><button class="btn alt" onclick="go('home')">Back</button>`;
+const av=(a,k)=>a.length?a.reduce((x,y)=>x+y[k],0)/a.length:0,f=x=>x.toFixed(1),R=L.slice(-5),P=L.slice(0,-5),d=k=>P.length?av(R,k)-av(P,k):0,sg=x=>(x>0?'+':'')+f(x),r=(t,k)=>`<div class="row"><b>${t}</b><br>${f(av(L,k))} of 5 average${P.length?' · '+sg(d(k))+' recently':''}</div>`;
+return`<h2>My progress</h2><p class="mut">Self-reported, not medical advice. ${L.length} sessions logged.</p>${r('MOOD','m')}${r('STRESS (lower is better)','s')}${r('CONFIDENCE','c')}<h2>Private journal</h2>${L.slice(-3).reverse().map(x=>`<div class="row">${e(x.d||'(no notes)')}</div>`).join('')}<button class="btn alt" onclick="ls('ember_log','[]');render()">Clear my log</button><button class="btn alt" onclick="go('home')">Back</button>`},
+tasks:()=>{const d=new Date(),st={Daily:d.toDateString(),Weekly:Math.floor(Date.now()/6048e5),Monthly:d.getFullYear()+'-'+d.getMonth()},a=ckl();
+return`<h2>Tasks</h2><p class="mut">Level ${S.heat}. Daily resets each day, weekly each week, monthly each month. All optional.</p><div class="chips">${[0,1,2,3,4,5].map(h=>`<button class="chip ${S.heat==h?'on':''}" onclick="S.heat=${h};render()">${h}</button>`).join('')}</div>`+['Daily','Weekly','Monthly'].map(p=>`<h2>${p}</h2>`+TK.map((t,i)=>t[0]==p&&t[1]<=S.heat?(k=>`<button class="btn alt" onclick="tk('${k}')">${a.includes(k)?'✅':'⬜'} ${e(t[2])}</button>`)('k'+p+st[p]+i):'').join('')).join('')+`<button class="btn alt" onclick="go('home')">Back</button>`},
+rlh:()=>`<h2>Roulettes</h2><p class="mut">Each roll picks from your level (${S.heat}) and below. Roll again any time, pass on anything.</p>${R.map((q,i)=>`<button class="btn" onclick="rl(${i})">${e(q.k)}</button>`).join('')}<button class="btn alt" onclick="go('home')">Back</button>`,
+rlt:()=>{const q=R[S.ri];return`<h2>${e(q.k)}</h2><p class="mut">${e(q.r)}</p>${S.roll?S.roll.map((x,i)=>`<div class="row"><b>${'WXYZ'[i]} · ${e(x[0])} · rolled ${x[1]}</b><br>${e(x[2])}</div>`).join('')+`<p class="mut">Bonus dice: ${S.bd}</p>`+(S.bo?`<div class="row"><b>BONUS</b><br>${e(S.bo)}</div>`:'')+(S.spin?'':`<button class="btn" onclick="rDone()">Done. Score a point</button>`):''}<button class="btn ${S.roll?'alt':''}" onclick="doRoll()">${S.roll?'Roll again':'Roll the dice'}</button><button class="btn alt" onclick="go('rlh')">Back</button>`},
+flags:()=>{const a=flg();return`<h2>🍍 Lifestyle flags</h2><p class="mut">Private badges, saved on this device.</p><div class="chips">${FL.map((t,i)=>`<button class="chip ${a.includes(i)?'on':''}" onclick="fl(${i})">${e(t)}</button>`).join('')}</div><button class="btn alt" onclick="go('home')">Back</button>`},
+learn:()=>`<h2>Learn something new</h2>${TIPS.map(t=>`<div class="row"><b>${e(t[0])}</b><br>${e(t[1])}</div>`).join('')}<button class="btn alt" onclick="go('home')">Back</button>`
+};
+function render(){const a=$('#app');a.innerHTML=V[S.scr]();if(S._l!==S.scr){a.classList.remove('in');void a.offsetWidth;a.classList.add('in');S._l=S.scr}}
+const vib=n=>{try{navigator.vibrate&&navigator.vibrate(n)}catch(x){}};
+function th(){const r=document.documentElement,d=r.dataset.theme?r.dataset.theme=='dark':matchMedia('(prefers-color-scheme:dark)').matches,n=d?'light':'dark';r.dataset.theme=n;ls('ember_th',n)}
+if(ls('ember_th'))document.documentElement.dataset.theme=ls('ember_th');
+document.addEventListener('click',ev=>{if(ev.target.closest('.btn,.chip'))vib(10)});
+(function(){const c=$('#fx'),x=c.getContext('2d'),rm=matchMedia('(prefers-reduced-motion:reduce)').matches;let W,H,P=[];
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
+function add(px,py,b){P.push({x:px,y:py,vx:(Math.random()-.5)*(b?9:.5),vy:b?-Math.random()*10:-Math.random()*.7-.2,r:Math.random()*2.5+1,l:b?70:400+Math.random()*300,b:b})}
+window.burst=function(){if(rm)return;for(let i=0;i<60;i++)add(W/2,H*.6,1)};
+if(rm)return;
+(function t(){x.clearRect(0,0,W,H);const col=getComputedStyle(document.documentElement).getPropertyValue('--ac').trim()||'#ff5e7e';
+if(P.length<45&&Math.random()<.3)add(Math.random()*W,H+5,0);
+P=P.filter(p=>p.l>0&&p.y>-20);
+for(const p of P){p.x+=p.vx;p.y+=p.vy;if(p.b)p.vy+=.25;p.l--;x.globalAlpha=Math.min(1,p.l/50)*(p.b?.9:.45);x.fillStyle=col;x.beginPath();x.arc(p.x,p.y,p.r,0,6.3);x.fill()}
+requestAnimationFrame(t)})()})();
+['rDone','done','snapDone'].forEach(n=>{const f=window[n];window[n]=function(){burst();vib([20,30,20]);return f.apply(this,arguments)}});
+(function(){const dr=window.doRoll;window.doRoll=function(){if(S.spin)return;S.spin=1;let n=0;const t=setInterval(()=>{S.roll=R[S.ri].d.map(d=>[d[0],Math.floor(Math.random()*10),'Rolling...']);S.bd='????';S.bo=null;render();vib(8);if(++n>7){clearInterval(t);S.spin=0;dr();vib(30);if(S.bo)burst()}},70)}})();
+go(ls('ember_age')=='1'?'home':'gate');
+</script></body></html>
